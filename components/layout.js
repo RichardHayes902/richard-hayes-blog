@@ -8,7 +8,7 @@ import profilePic from "/public/images/me.png"
 
 export const name = 'Richard Hayes'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, fourOhFour }) {
     return (
         <body className={"bg-white dark:bg-trueGray-800 flex flex-col min-h-screen"}>
             <Navbar />
@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
                 </Head>
 
                 <div className={styles.header}>
-                    {home ? (
+                    {home && (
                         <div style={{ marginBottom: '40px' }}>
                             <Image
                                 priority
@@ -41,17 +41,22 @@ export default function Layout({ children, home }) {
                                 alt={name}
                             />
                         </div>
-                    ) : (
-                        <></>
                     )}
                 </div>
 
                 <main>{children}</main>
 
-                {!home && (
+                {!home && !fourOhFour ? (
                     <div className={styles.backToHome}>
                         <Link href="/">
-                            <a>← Back to home</a>
+                            <a className={'hover:no-underline'}>← Back to home</a>
+                        </Link>
+                    </div>
+                )
+                    : !home && (
+                    <div className={styles.backToHome}>
+                        <Link href="/">
+                            <a className={'hover:no-underline'}>← Back on the path</a>
                         </Link>
                     </div>
                 )}

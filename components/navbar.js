@@ -52,7 +52,7 @@ export const Navbar = () => {
                         <div className={'w-full lg:inline-flex lg:flex-grow lg:w-auto'}>
                             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                                 <MenuItem link={'/'} text={'Home'}/>
-                                <MenuItem link={'/'} text={'Blog'}/>
+                                <MenuItem link={'/blog'} text={'Blog'}/>
                                 <MenuItem link={'/technologies'} text={'Technologies'}/>
                                 <MenuItem link={'/about'} text={'About me'}/>
                                 <MenuItem link={'/contact'} text={'Contact'}/>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                         <div className={'hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'}>
                             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                                 <MenuItem link={'/'} text={'Home'}/>
-                                <MenuItem link={'/'} text={'Blog'}/>
+                                <MenuItem link={'/blog'} text={'Blog'}/>
                                 <MenuItem link={'/technologies'} text={'Technologies'}/>
                                 <MenuItem link={'/about'} text={'About me'}/>
                                 <MenuItem link={'/contact'} text={'Contact'}/>
