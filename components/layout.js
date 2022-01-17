@@ -8,7 +8,7 @@ import profilePic from "/public/images/me.png"
 
 export const name = 'Richard Hayes'
 
-export default function Layout({ children, home, fourOhFour }) {
+export default function Layout({ children, home, fourOhFour, blog, blogPost, about, contact, technologies }) {
     return (
         <body className={"bg-white dark:bg-trueGray-800 flex flex-col min-h-screen"}>
             <Navbar />
@@ -46,20 +46,34 @@ export default function Layout({ children, home, fourOhFour }) {
 
                 <main>{children}</main>
 
-                {!home && !fourOhFour ? (
-                    <div className={styles.backToHome}>
-                        <Link href="/">
-                            <a className={'hover:no-underline'}>← Back to home</a>
-                        </Link>
-                    </div>
-                )
-                    : !home && (
-                    <div className={styles.backToHome}>
-                        <Link href="/">
-                            <a className={'hover:no-underline'}>← Back on the path</a>
-                        </Link>
-                    </div>
-                )}
+                {
+                    technologies || contact || about || blog ?
+                        (
+                            <div className={styles.backToHome}>
+                                <Link href="/">
+                                    <a className={'hover:no-underline'}>← Back to home</a>
+                                </Link>
+                            </div>
+                        )
+                    : fourOhFour ?
+                        (
+                            <div className={styles.backToHome}>
+                                <Link href="/">
+                                    <a className={'hover:no-underline'}>← Back on the path</a>
+                                </Link>
+                            </div>
+                        )
+                    : blogPost ?
+                        (
+                            <div className={styles.backToHome}>
+                                <Link href="/blog">
+                                    <a className={'hover:no-underline'}>← Blog Home</a>
+                                </Link>
+                            </div>
+                        )
+                    : // home
+                        ( <></> )
+                }
             </div>
         </body>
     )
