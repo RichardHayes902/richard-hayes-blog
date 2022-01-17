@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout, {name} from '../components/layout'
+import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import campfire from "../public/images/campfire-g6fa712b0d_640.png";
 
@@ -21,7 +21,7 @@ export default function Custom404() {
                     src={campfire}
                     height={150}
                     width={200}
-                    alt={name}
+                    alt={'Campfire'}
                 />
                 <br />
                 {/*<small>*/}
