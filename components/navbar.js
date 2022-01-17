@@ -28,7 +28,7 @@ export const Navbar = () => {
                 <h1 className={'text-black dark:text-white text-xl inline-flex items-center p-2 mr-4 hover:no-underline'}>Richard Hayes</h1>
 
                 <button
-                    className=' inline-flex p-3 hover:bg-themeYellow dark:hover:bg-black rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+                    className=' inline-flex p-3 hover:bg-themeYellow dark:hover:bg-black rounded lg:hidden text-black dark:text-white ml-auto outline-none'
                     onClick={handleClick}
                 >
                     <svg
@@ -59,7 +59,7 @@ export const Navbar = () => {
                                 <Toggle/>
                             </div>
                         </div>
-                        :
+                    :
                         <div className={'hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'}>
                             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                                 <MenuItem link={'/'} text={'Home'}/>
