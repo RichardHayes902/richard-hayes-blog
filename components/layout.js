@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
 
-                <header className={styles.header}>
+                <div className={styles.header}>
                     {home ? (
                         <div style={{ marginBottom: '40px' }}>
                             <Image
@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
                     ) : (
                         <></>
                     )}
-                </header>
+                </div>
 
                 <main>{children}</main>
 

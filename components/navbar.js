@@ -53,9 +53,9 @@ export const Navbar = () => {
                             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                                 <MenuItem link={'/'} text={'Home'}/>
                                 <MenuItem link={'/'} text={'Blog'}/>
-                                <MenuItem link={'/'} text={'Technologies'}/>
-                                <MenuItem link={'/'} text={'About me'}/>
-                                <MenuItem link={'/'} text={'Contact'}/>
+                                <MenuItem link={'/technologies'} text={'Technologies'}/>
+                                <MenuItem link={'/about'} text={'About me'}/>
+                                <MenuItem link={'/contact'} text={'Contact'}/>
                                 <Toggle/>
                             </div>
                         </div>
@@ -64,9 +64,9 @@ export const Navbar = () => {
                             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
                                 <MenuItem link={'/'} text={'Home'}/>
                                 <MenuItem link={'/'} text={'Blog'}/>
-                                <MenuItem link={'/'} text={'Technologies'}/>
-                                <MenuItem link={'/'} text={'About me'}/>
-                                <MenuItem link={'/'} text={'Contact'}/>
+                                <MenuItem link={'/technologies'} text={'Technologies'}/>
+                                <MenuItem link={'/about'} text={'About me'}/>
+                                <MenuItem link={'/contact'} text={'Contact'}/>
                                 <Toggle/>
                             </div>
                         </div>
