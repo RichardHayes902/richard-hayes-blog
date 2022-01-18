@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
 
 export default function AboutMe() {
     return (
@@ -8,8 +7,12 @@ export default function AboutMe() {
             <Head>
                 <title>About</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>About Me Page</p>
+            <section>
+                <h1 className={"text-4xl font-semibold text-center"}>About</h1>
+            </section>
+
+            <section>
+
             </section>
         </Layout>
     )

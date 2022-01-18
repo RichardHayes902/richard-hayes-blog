@@ -11,4 +11,6 @@ List of items
 
 > quoted text
 
-`code block`
+```bash
+nmap -sC -sV -oA BOX 10.10.10.155
+```

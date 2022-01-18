@@ -1,10 +1,39 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ["./components/*.js", "/pages/**/*.jss"],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,html,md}',
+    './components/**/*.{js,ts,jsx,tsx,html,md}',
+  ],
   presets: [],
   darkMode: 'class',
   theme: {
+
+    extend: {
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme('colors.white'),
+            h1: {
+              color: theme('colors.white'),
+            },
+            li: {
+              color: theme('colors.white'),
+            },
+            strong: {
+              color: theme('colors.white'),
+            },
+            blockquote: {
+              color: theme('colors.white'),
+            },
+            p: {
+              color: theme('colors.white'),
+            },
+          },
+        },
+      }),
+    },
+
     screens: {
       sm: '640px',
       md: '768px',
@@ -13,27 +42,47 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
+      // transparent: 'transparent',
+      // current: 'currentColor',
 
-      black: colors.black,
-      white: colors.white,
       gray: colors.coolGray,
       warmGray: colors.warmGray,
       trueGray: colors.trueGray,
+      inherit: colors.inherit,
+      current: colors.current,
+      transparent: colors.transparent,
+      black: colors.black,
+      white: colors.white,
+      slate: colors.slate,
+      // gray: colors.gray,
+      zinc: colors.zinc,
+      neutral: colors.neutral,
+      stone: colors.stone,
       red: colors.red,
-      yellow: colors.amber,
-      green: colors.emerald,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
       blue: colors.blue,
       indigo: colors.indigo,
-      purple: colors.violet,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
       pink: colors.pink,
+      rose: colors.rose,
 
       themeGreen: '#73b699',
       themeTan: '#f4f2dc',
       themeOrange: '#ed7452',
-      themeDark: '#3e3e5d',
-      themeYellow: '#f7cd84'
+      themeDark: '#171717',
+      themeYellow: '#f7cd84',
+      cardLight: '#d4d4d4',
+      cardDark: '#262626',
     },
     spacing: {
       px: '1px',
@@ -834,7 +883,8 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['dark'],
-      textColor: ['dark']
+      textColor: ['dark'],
+      typography: ['dark']
     },
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],
@@ -982,5 +1032,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-  ],
+  ]
 }
