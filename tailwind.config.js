@@ -5,16 +5,36 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,html,md}',
     './components/**/*.{js,ts,jsx,tsx,html,md}',
   ],
+    safelist: [
+      {
+        pattern: /^-?m(\w?)-/,
+      },
+      {
+        pattern: /^p(\w?)-/
+      },
+      {
+        pattern: /^text-/
+      },
+      {
+        pattern: /^bg-/
+      }
+    ],
   presets: [],
   darkMode: 'class',
+  important: true,
   theme: {
-
     extend: {
       typography: (theme) => ({
         dark: {
           css: {
             color: theme('colors.white'),
             h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            h3: {
               color: theme('colors.white'),
             },
             li: {
@@ -42,9 +62,6 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      // transparent: 'transparent',
-      // current: 'currentColor',
-
       gray: colors.coolGray,
       warmGray: colors.warmGray,
       trueGray: colors.trueGray,

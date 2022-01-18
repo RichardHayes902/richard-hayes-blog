@@ -17,7 +17,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                     <link rel="icon" href="/favicon.ico" />
                     <meta
                         name="description"
-                        content="Learn how to build a personal website using Next.js"
+                        content="Richard Hayes Personal Website and Blog"
                     />
                     <meta
                         property="og:image"
@@ -29,9 +29,9 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
 
-                <div className={styles.header}>
+                <div className={'flex-1 self-center mb-4'}>
                     {home && (
-                        <div style={{ marginBottom: '40px' }}>
+                        <div className={'text-center'}>
                             <Image
                                 priority
                                 src={profilePic}
@@ -49,7 +49,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                 {
                     technologies || contact || about || blog ?
                         (
-                            <div className={styles.backToHome}>
+                            <div className={'text-center pt-8'}>
                                 <Link href="/">
                                     <a className={'hover:no-underline'}>← Back to home</a>
                                 </Link>
