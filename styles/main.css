@@ -782,6 +782,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-0 {
   top: 0px !important;
 }
+.z-0 {
+  z-index: 0 !important;
+}
+.z-40 {
+  z-index: 40 !important;
+}
 .m-0 {
   margin: 0px !important;
 }
@@ -4538,6 +4544,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-semibold {
   font-weight: 600 !important;
+}
+.font-thin {
+  font-weight: 100 !important;
 }
 .font-bold {
   font-weight: 700 !important;

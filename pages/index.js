@@ -8,7 +8,7 @@ export default function Home ()  {
           <title>{name}</title>
         </Head>
         <section className={'pt-6 grid place-items-center'}>
-          <p className={'lg:w-1/2 w-full'}>
+          <p className={'lg:w-1/2 w-full font-thin'}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
               laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in

@@ -30,7 +30,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
 
                 <div className={'mb-4 grid'}>
                     {home && (
-                        <div className={"h-48 w-48 md:h-72 md:w-72 relative justify-self-center"}>
+                        <div className={"h-48 w-48 md:h-72 md:w-72 relative justify-self-center z-0"}>
                             <Image
                                 priority
                                 src={profilePic}

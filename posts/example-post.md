@@ -1,7 +1,10 @@
 ---
-title: 'Example Post'
-date: '2022-01-17'
-tag: 'locksport'
+title:      'Example Post'
+date:       '2022-01-17'
+tag:        'locksport'
+subtag1:    'SPP'
+subtag2:    'Spool Pins'
+subtag3:    'Serrated Pins'
 ---
 
 ### Example Post

@@ -14,9 +14,20 @@ export const Blog_Post_Card = (props) => {
                     <hr />
                 </div>
                 <div className={'flex flex-row items-center'}>
-                    <p className={'text-white mr-2 text-xs'}>Tag:</p>
+                    <p className={'dark:text-white mr-2 text-xs font-thin'}>Tag:</p>
                     <div className={'bg-slate-600 px-3 rounded-full'}>
-                        <p className={'text-white text-xs'}>{props.tag}</p>
+                        <p className={'text-white text-xs font-thin'}>{props.tag}</p>
+                    </div>
+                </div>
+                <div className={'flex flex-row items-center mt-2'}>
+                    <div className={'dark:bg-blue-900 bg-blue-500 px-3 rounded-full'}>
+                        <p className={'text-white text-xs font-thin'}>{props.subtag1}</p>
+                    </div>
+                    <div className={'dark:bg-cyan-900 bg-cyan-500 px-3 mx-2 rounded-full'}>
+                        <p className={'text-white text-xs font-thin'}>{props.subtag2}</p>
+                    </div>
+                    <div className={'dark:bg-red-900 bg-red-500 px-3 rounded-full'}>
+                        <p className={'text-white text-xs font-thin'}>{props.subtag3}</p>
                     </div>
                 </div>
             </a>

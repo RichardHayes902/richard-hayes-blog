@@ -1,7 +1,10 @@
 ---
-title: 'Another Post'
-date: '2022-01-18'
-tag: 'htb'
+title:      'Another Post'
+date:       '2022-01-18'
+tag:        'htb'
+subtag1:    'Linux'
+subtag2:    'Remote Code Execution'
+subtag3:    'SQL Injection'
 ---
 
 ### Example Post
