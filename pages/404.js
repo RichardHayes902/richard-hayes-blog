@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout from '../components/layout'
+import Layout, {name} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import campfire from "../public/images/campfire-g6fa712b0d_640.png";
+import profilePic from "../public/images/me.png";
 
 export default function Custom404() {
     return (
@@ -15,22 +16,31 @@ export default function Custom404() {
                 <h1 className={utilStyles.headingXl}>You appear to be lost</h1>
             </section>
 
-            <section className={'text-center my-3'}>
-                <Image
-                    priority
-                    src={campfire}
-                    height={150}
-                    width={200}
-                    alt={'Campfire'}
-                />
-                <br />
-                {/*<small>*/}
-                {/*    Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576382">OpenClipart-Vectors</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576382">Pixabay</a>*/}
-                {/*</small>*/}
-            </section>
+            {/*<section className={'text-center my-3'}>*/}
+            {/*    <Image*/}
+            {/*        priority*/}
+            {/*        src={campfire}*/}
+            {/*        height={150}*/}
+            {/*        width={200}*/}
+            {/*        alt={'Campfire'}*/}
+            {/*    />*/}
+            {/*    <br />*/}
+            {/*</section>*/}
+            <div className={'my-10 grid'}>
+                <div className={"h-52 w-64 md:h-72 md:w-96 relative justify-self-center"}>
+                    <Image
+                        src={campfire}
+                        priority
+                        alt={name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="self-center"
+                    />
+                </div>
+            </div>
 
-            <section className={'text-center'}>
-                <p className={'text-xs'}>There's no reason to panic. Rest here for a while, traveler.</p>
+            <section className={'text-center pb-10'}>
+                <p className={'md:text-sm text-xs'}>There's no reason to panic. Rest here for a while, traveler.</p>
             </section>
         </Layout>
     )

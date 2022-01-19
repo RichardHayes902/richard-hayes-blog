@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import { Navbar } from "./navbar";
 import profilePic from "/public/images/me.png"
@@ -29,16 +28,16 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                     <meta name="twitter:card" content="summary_large_image" />
                 </Head>
 
-                <div className={'flex-1 self-center mb-4'}>
+                <div className={'mb-4 grid'}>
                     {home && (
-                        <div className={'text-center'}>
+                        <div className={"h-48 w-48 md:h-72 md:w-72 relative justify-self-center"}>
                             <Image
                                 priority
                                 src={profilePic}
-                                className={utilStyles.borderCircle}
-                                height={144}
-                                width={144}
                                 alt={name}
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-full self-center"
                             />
                         </div>
                     )}

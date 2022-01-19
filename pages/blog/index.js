@@ -26,6 +26,7 @@ export default function BlogHome({ allPostsData }) {
                 <div className={'grid grid-cols-3 gap-4'}>
                     {allPostsData.map(({ id, date, title }) => (
                         <Blog_Post_Card
+                            key={id}
                             id={id}
                             date={date}
                             title={title}
