@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Layout, {name} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import campfire from "../public/images/campfire-g6fa712b0d_640.png";
-import profilePic from "../public/images/me.png";
 
 export default function Custom404() {
     return (
@@ -16,16 +15,6 @@ export default function Custom404() {
                 <h1 className={utilStyles.headingXl}>You appear to be lost</h1>
             </section>
 
-            {/*<section className={'text-center my-3'}>*/}
-            {/*    <Image*/}
-            {/*        priority*/}
-            {/*        src={campfire}*/}
-            {/*        height={150}*/}
-            {/*        width={200}*/}
-            {/*        alt={'Campfire'}*/}
-            {/*    />*/}
-            {/*    <br />*/}
-            {/*</section>*/}
             <div className={'my-10 grid'}>
                 <div className={"h-52 w-64 md:h-72 md:w-96 relative justify-self-center"}>
                     <Image
