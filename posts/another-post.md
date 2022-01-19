@@ -1,6 +1,7 @@
 ---
 title: 'Another Post'
 date: '2022-01-18'
+tag: 'htb'
 ---
 
 ### Example Post
@@ -17,5 +18,5 @@ nmap -sC -sV -oA BOX 10.10.10.155
 
 ---
 
-![alt text string](/images/laravel.svg "dirr")
+![alt text string](/images/laravel.svg "title")
 

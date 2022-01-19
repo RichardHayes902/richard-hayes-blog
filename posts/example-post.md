@@ -1,6 +1,7 @@
 ---
 title: 'Example Post'
 date: '2022-01-17'
+tag: 'locksport'
 ---
 
 ### Example Post
