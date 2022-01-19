@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from '../../components/layout'
-import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
+import { Blog_Post_Card } from "../../components/blog-post-card";
 import { getSortedPostsData } from '../../lib/posts'
 
 export async function getStaticProps() {
@@ -20,24 +18,20 @@ export default function BlogHome({ allPostsData }) {
             <Head>
                 <title>Blog</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>Blog Home Page</p>
+            <section className={'text-center py-4'}>
+                <h1 className={"text-4xl font-semibold text-center"}>Blog Home Page</h1>
             </section>
 
-            <section>
-                <ul>
+            <section className={'mt-6'}>
+                <div className={'grid grid-cols-3 gap-4'}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li className={'my-2'} key={id}>
-                            <Link href={`/blog/${id}`}>
-                                <a className={'hover:no-underline'}>{title}</a>
-                            </Link>
-                            <br />
-                            <small className={utilStyles.lightText}>
-                                <Date dateString={date} />
-                            </small>
-                        </li>
+                        <Blog_Post_Card
+                            id={id}
+                            date={date}
+                            title={title}
+                        />
                     ))}
-                </ul>
+                </div>
             </section>
         </Layout>
     )

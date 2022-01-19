@@ -12,7 +12,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
     return (
         <body className={"bg-white dark:bg-trueGray-800 flex flex-col min-h-screen"}>
             <Navbar />
-            <div className={styles.container}>
+            <div className={'px-6 pt-6 pb-12'}>
                 <Head>
                     <link rel="icon" href="/favicon.ico" />
                     <meta

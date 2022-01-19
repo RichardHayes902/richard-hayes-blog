@@ -28,7 +28,7 @@ export default function Post({ postData }) {
             </Head>
             <article>
                 <h1 className={"text-4xl font-semibold"}>{postData.title}</h1>
-                <div className={"dark:text-gray-600 text-gray-400 mb-4"}>
+                <div className={"text-neutral-500 dark:text-neutral-600 mb-4"}>
                     <Date dateString={postData.date} />
                 </div>
                 <div className={"prose dark:prose-dark"} dangerouslySetInnerHTML={{ __html: postData.htmlString }} />
