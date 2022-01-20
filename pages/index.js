@@ -8,13 +8,17 @@ export default function Home ()  {
           <title>{name}</title>
         </Head>
         <section className={'pt-6 grid place-items-center'}>
-          <p className={'lg:w-1/2 w-full font-thin'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            <p className={'lg:w-1/2 w-full font-thin'}>
+                Hello and welcome to my site. My name is Richard, and I'm a web developer living in Nova Scotia, Canada. <br />
+                This site started out as a way for me to mess around and learn Next.js and began to morph into a project that
+                I decided I would like to continue with.
+            </p>
+            <p className={'lg:w-1/2 w-full font-thin my-2'}>
+                This site is a work in progress.
+            </p>
+            <p className={'lg:w-1/2 w-full text-center'}>
+                Thanks for stopping by!
+            </p>
         </section>
       </Layout>
   )

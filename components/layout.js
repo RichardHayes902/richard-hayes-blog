@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './layout.module.css'
 import Link from 'next/link'
 import { Navbar } from "./navbar";
 import profilePic from "/public/images/me.png"
@@ -56,7 +55,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                         )
                     : fourOhFour ?
                         (
-                            <div className={styles.backToHome}>
+                            <div className={'text-center pt-8'}>
                                 <Link href="/">
                                     <a className={'hover:no-underline'}>← Back on the path</a>
                                 </Link>
@@ -64,7 +63,7 @@ export default function Layout({ children, home, fourOhFour, blog, blogPost, abo
                         )
                     : blogPost ?
                         (
-                            <div className={styles.backToHome}>
+                            <div className={'text-center pt-8'}>
                                 <Link href="/blog">
                                     <a className={'hover:no-underline'}>← Blog Home</a>
                                 </Link>
