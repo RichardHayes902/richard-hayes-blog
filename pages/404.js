@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Layout, {name} from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import Layout from '../components/layout'
 import campfire from "../public/images/campfire-g6fa712b0d_640.png";
 
 export default function Custom404() {
@@ -11,8 +10,8 @@ export default function Custom404() {
                 <title>404</title>
             </Head>
 
-            <section className={'text-center'}>
-                <h1 className={utilStyles.headingXl}>You appear to be lost</h1>
+            <section className={'text-center py-4'}>
+                <h1 className={"text-4xl font-semibold text-center"}>You appear to be lost</h1>
             </section>
 
             <div className={'my-10 grid'}>
@@ -20,7 +19,7 @@ export default function Custom404() {
                     <Image
                         src={campfire}
                         priority
-                        alt={name}
+                        alt={'404'}
                         layout="fill"
                         objectFit="cover"
                         className="self-center"
