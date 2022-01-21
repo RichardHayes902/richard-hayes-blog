@@ -4,7 +4,7 @@ date:       '2022-01-20'
 tag:        'htb'
 subtag1:    'Windows'
 subtag2:    'CVE'
-subtag3:    'Metasploit'
+subtag3:    'SMB'
 ---
 
 ###### Blue is a retired easy-ranked Windows machine on HacktheBox.
@@ -79,4 +79,4 @@ root flag was on the desktop of user _Administrator_
 ### SUMMARY
 
 ---
-Blue is arguably the easiest box on HackTheBox and requires the use of a very well-known vulnerability, **Eternal Blue**, to immediately gain an elevated shell. It is a great introductory box for anyone interested in learning pentesting techniques as the barrier to entry is low, and the results are quick.
+Blue is arguably the easiest Windows box on HackTheBox and requires the use of a very well-known vulnerability, **Eternal Blue**, to immediately gain an elevated shell. It is, like _Lame_, a great introductory box for anyone interested in learning pentesting techniques as the barrier to entry is low, and the results are quick.
