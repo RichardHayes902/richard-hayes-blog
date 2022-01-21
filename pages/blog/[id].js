@@ -46,7 +46,7 @@ export default function Post({ postData }) {
                             className="self-center"
                         />
                     </div>
-                    <div className={"prose prose-md lg:prose-xl dark:prose-dark w-full"} dangerouslySetInnerHTML={{ __html: postData.htmlString }} />
+                    <div className={"prose prose-sm lg:prose-xl dark:prose-dark w-full"} dangerouslySetInnerHTML={{ __html: postData.htmlString }} />
                 </div>
             </article>
         </Layout>

@@ -17,6 +17,9 @@ module.exports = {
       },
       {
         pattern: /^bg-/
+      },
+      {
+        pattern: /^object-/
       }
     ],
   presets: [],
