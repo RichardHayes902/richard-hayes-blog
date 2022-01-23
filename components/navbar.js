@@ -23,7 +23,7 @@ export const Navbar = () => {
     )
 
     return (
-        <div className={'sticky top-0 z-40'}>
+        <div className={'sticky top-0 z-40 left-0 right-0'}>
             <nav className='flex items-center flex-wrap bg-white dark:bg-trueGray-900 p-3 '>
                 <h1 className={'text-black dark:text-white text-xl inline-flex items-center p-2 mr-4 hover:no-underline'}>Richard Hayes</h1>
 

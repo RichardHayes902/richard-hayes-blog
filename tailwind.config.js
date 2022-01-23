@@ -20,7 +20,10 @@ module.exports = {
       },
       {
         pattern: /^object-/
-      }
+      },
+      {
+        pattern: /^shrink-/
+      },
     ],
   presets: [],
   darkMode: 'class',

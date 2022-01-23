@@ -31,12 +31,12 @@ export default function Post({ postData }) {
                 <title>{postData.title}</title>
             </Head>
             <article>
-                <div className={'pt-6 grid place-items-center'}>
+                <div className={'pt-6 md:grid md:place-items-center'}>
                     <h1 className={"text-4xl font-semibold"}>{postData.title}</h1>
                     <div className={"text-neutral-500 dark:text-neutral-600 mb-2"}>
                         <Date dateString={postData.date} />
                     </div>
-                    <div className={"h-48 w-full md:h-96 md:w-full relative justify-self-center z-0 mb-1"}>
+                    <div className={"h-48 w-full md:h-96 relative justify-self-center z-0 mb-1"}>
                         <Image
                             priority
                             src={BANNER_IMAGE_URL}
@@ -46,7 +46,7 @@ export default function Post({ postData }) {
                             className="self-center"
                         />
                     </div>
-                    <div className={"prose prose-sm lg:prose-xl dark:prose-dark w-full"} dangerouslySetInnerHTML={{ __html: postData.htmlString }} />
+                    <div className={"flex flex-col prose prose-sm md:prose-xl dark:prose-dark"} dangerouslySetInnerHTML={{ __html: postData.htmlString }} />
                 </div>
             </article>
         </Layout>
